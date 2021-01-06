@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         int tries = 7;
 
-        final String[] wordList = {"BANANE", "MANGELERNAEHRUNG", "QUERSCHLAEGER", "HANDGEMENGE", "SCHLAGANFALL"};
+        final String[] wordList = {"AFFE", "BANANE", "MANGELERNAEHRUNG", "QUERSCHLAEGER", "HANDGEMENGE", "SCHLAGANFALL"};
         final String solution = randomWord(wordList, wordList.length);
 
 
