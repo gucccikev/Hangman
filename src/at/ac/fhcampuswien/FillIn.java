@@ -2,6 +2,7 @@ package at.ac.fhcampuswien;
 
 public class FillIn extends Display{
 
+
     //befüllt den solutionWord char Array mit dem Lösungswort
     public static char[] fillSolutionWord(String solution, char[] solutionWord){
         for(int i = 0; i < solution.length(); i++){
@@ -9,6 +10,7 @@ public class FillIn extends Display{
         }
         return solutionWord;
     }
+
 
     //befüllt das guessingTemplate char Array mit Unterstrichen entsprechend der Buchstabenanzahl des Lösungswortes
     public static char[] fillGuessingTemplate(String solution, char[] guessingTemplate){
@@ -18,6 +20,7 @@ public class FillIn extends Display{
         return guessingTemplate;
     }
 
+
     //überprüft ob der eingegebene Buchstabe im Lösungswort enthalten ist, wenn ja dann werden die entsprechenden Unterstriche im guessingTemplate char Array durch diesen Buchstaben ersetzt
     public static char[] fillInCorrectGuesses(char guess, String solution, char[] solutionWord, char[] guessingTemplate){
         for (int i = 0; i < solution.length(); i++){
@@ -26,6 +29,7 @@ public class FillIn extends Display{
         }
         return guessingTemplate;
     }
+
 
     //befüllt das wrongGuesses char Array mit den falsch eingegebenen Buchstaben
     public static char[] fillInFalseGuesses(char guess, char[] wrongGuesses, int wrongGuessCounter){
