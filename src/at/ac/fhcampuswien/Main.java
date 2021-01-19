@@ -3,7 +3,7 @@ package at.ac.fhcampuswien;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends FillIn {
 
     public static void main(String[] args) {
         int tries = 7;
@@ -74,32 +74,7 @@ public class Main {
         return words[randomNumber];
     }
 
-    private static char[] fillSolutionWord(String solution, char[] solutionWord){
-        for(int i = 0; i < solution.length(); i++){
-            solutionWord[i] = solution.charAt(i);
-        }
-        return solutionWord;
-    }
 
-    private static char[] fillGuessingTemplate(String solution, char[] guessingTemplate){
-        for (int i = 0; i < solution.length(); i++) {
-            guessingTemplate[i] = '_';
-        }
-        return guessingTemplate;
-    }
-
-    private static char[] fillInCorrectGuesses(char guess, String solution, char[] solutionWord, char[] guessingTemplate){
-        for (int i = 0; i < solution.length(); i++){
-            if (guess == solutionWord[i])
-                guessingTemplate[i] = guess;
-        }
-        return guessingTemplate;
-    }
-
-    private static char[] fillInFalseGuesses(char guess, char[] wrongGuesses, int wrongGuessCounter){
-        wrongGuesses[wrongGuessCounter] = guess;
-        return wrongGuesses;
-    }
 
     private static void mainDisplay(char[] guessingTemplate, char[] wrongGuesses, int counter){
         System.out.println(guessingTemplate);
@@ -109,93 +84,5 @@ public class Main {
         System.out.println("Gib einen Großbuchstaben ein!");
     }
 
-    public static void hangmanImage(int counter) {
-        if (counter == 1) {
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println("___|___");
-            System.out.println();
-        }
-        if (counter == 2) {
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("___|___");
-        }
-        if (counter == 3) {
-            System.out.println("   ____________");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   | ");
-            System.out.println("___|___");
-        }
-        if (counter == 4) {
-            System.out.println("   ____________");
-            System.out.println("   |          _|_");
-            System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("   |");
-            System.out.println("___|___");
-        }
-        if (counter == 5) {
-            System.out.println("   ____________");
-            System.out.println("   |          _|_");
-            System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
-            System.out.println("   |           |");
-            System.out.println("   |           |");
-            System.out.println("   |");
-            System.out.println("___|___");
-        }
-        if (counter == 6) {
-            System.out.println("   ____________");
-            System.out.println("   |          _|_");
-            System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
-            System.out.println("   |           |");
-            System.out.println("   |           |");
-            System.out.println("   |          / \\ ");
-            System.out.println("___|___      /   \\");
-        }
-        if (counter == 7) {
-            System.out.println("   ____________");
-            System.out.println("   |          _|_");
-            System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
-            System.out.println("   |          _|_");
-            System.out.println("   |         / | \\");
-            System.out.println("   |          / \\ ");
-            System.out.println("___|___      /   \\");
-        }
-    }
-    public static void youLostHangmanImage(int counter){
-        if (counter == 7) {
-            System.out.println("   ____________");
-            System.out.println("   |          _|_");
-            System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
-            System.out.println("   |          _|_");
-            System.out.println("   |         / | \\");
-            System.out.println("   |          / \\ ");
-            System.out.println("___|___      /   \\");
-        }
-    }
 }
 
