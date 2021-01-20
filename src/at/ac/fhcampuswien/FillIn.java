@@ -32,8 +32,8 @@ public class FillIn extends Display{
 
 
     //befüllt das wrongGuesses char Array mit den falsch eingegebenen Buchstaben
-    public static char[] fillInFalseGuesses(char guess, char[] wrongGuesses, int wrongGuessCounter){
-        wrongGuesses[wrongGuessCounter] = guess;
+    public static char[] fillInFalseGuesses(char guess, char[] wrongGuesses, int counter){
+        wrongGuesses[counter] = guess;
         return wrongGuesses;
     }
 }

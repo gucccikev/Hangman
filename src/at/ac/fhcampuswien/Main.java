@@ -19,11 +19,9 @@ public class Main extends FillIn {
         char[] wrongGuesses = new char[tries];
 
 
-        //char guess = 'A';
 
         Scanner scanner = new Scanner(System.in);
         int counter = 0;
-        int wrongGuessCounter = 0;
         System.out.println("Das Spiel startet du hast " + tries + " Versuche");
         System.out.println("Umlaute werden mit einem E nach dem entsprechenden Vokal dargestellt!");
 
@@ -33,7 +31,7 @@ public class Main extends FillIn {
             String controlGuessString = String.valueOf(guess);
             if (controlGuessString.matches("[A-Z]{1}") && controlGuessString.matches("[" + solution + "]")) {
                 //System.out.println("DEBUG :: Richtiger Buchstabe enthalten!\n");
-                int fails = tries - wrongGuessCounter;
+                int fails = tries - counter;
                 System.out.println("Du hast " + fails + " Versuch/e übrig!");
 
                 fillInCorrectGuesses(guess, solution, solutionWord, guessingTemplate);
@@ -42,11 +40,10 @@ public class Main extends FillIn {
             } else if (controlGuessString.matches("[A-Z]{1}") && !controlGuessString.matches("[" + solution + "]")) {
                 //System.out.println("DEBUG :: Buchstabe nicht enthalten!\n");
 
-                fillInFalseGuesses(guess, wrongGuesses, wrongGuessCounter);
-                wrongGuessCounter++;
-                int fails = tries - wrongGuessCounter;
-                System.out.println("Du hast " + fails + " Versuch/e übrig!");
+                fillInFalseGuesses(guess, wrongGuesses, counter);
                 counter++;
+                int fails = tries - counter;
+                System.out.println("Du hast " + fails + " Versuch/e übrig!");
             } else {
                 //System.out.println("DEBUG :: Falsches Eingabeformat!");
                 continue;
