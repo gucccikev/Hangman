@@ -37,11 +37,11 @@ public class Main {
 
         //wird kurz die Regeln und ANzahl der Versuche ausgeprinted
         System.out.println();
-        System.out.println("┍————-————-————-————-————-————- /ᐠ｡ꞈ｡ᐟ\\ ————-————-————-————-————-————-┑");
+        System.out.println("┍————-————-————--————-————-————- /ᐠ｡ꞈ｡ᐟ\\ ————-————--————-————-————-————-┑");
         System.out.println("                           Das Spiel startet.                          ");
-        System.out.println("                          Du hast " + tries + " Versuche."                    );
+        System.out.println("                           Du hast " + tries + " Versuche."                    );
         System.out.println(" Umlaute werden mit einem E nach dem entsprechenden Vokal dargestellt!");
-        System.out.println("┕————————-————-————-————-————-(..)(..) ∫∫————-————-————-———————-————-┙");
+        System.out.println("┕————————-————-————-—-———-————-(..)(..) ∫∫————-————-————-——-—————-————-┙");
         System.out.println();
 
 
@@ -55,7 +55,7 @@ public class Main {
             if (controlGuessString.matches("[A-Z]{1}") && controlGuessString.matches("[" + solution + "]")) {
                 //System.out.println("DEBUG :: Richtiger Buchstabe enthalten!\n");
                 int fails = tries - counter;
-                System.out.println("Du hast " + fails + " Versuch/e übrig!");
+                System.out.println("(☞◠‿◠)☞  Du hast " + fails + " Versuch/e übrig!");
 
                 //wird vor der neuen Abfrage des neuen Großbuchstaben, die Unterstriche durch die korrekten Eingaben ersetzt
                 getFunction.fillInCorrectGuesses(guess, solution, solutionWord, guessingTemplate);
@@ -70,7 +70,7 @@ public class Main {
                 counter++;
                 int fails = tries - counter;
                 System.out.println();
-                System.out.println("Du hast " + fails + " Versuch/e übrig!");
+                System.out.println("(☞◠‿◠)☞  Du hast " + fails + " Versuch/e übrig!");
             } else {
                 //System.out.println("DEBUG :: Falsches Eingabeformat!");
                 continue;
@@ -79,8 +79,22 @@ public class Main {
             //wenn die guesses gleich dem Lösungswort ist
             if (Arrays.equals(guessingTemplate, solutionWord)) {
                 System.out.println();
-                System.out.println("Gratulation, du hast gewonnen!");
                 System.out.println("Das Lösungswort ist: " + solution);
+                System.out.println("⊂_ヽ");
+                System.out.println("　 ＼＼");
+                System.out.println("　　 ＼( ͡° ͜ʖ ͡°)");
+                System.out.println("　　　 >　⌒ヽ");
+                System.out.println("　　　/ 　 へ＼");
+                System.out.println("　　 /　　/　＼＼");
+                System.out.println("　　 ﾚ　ノ　　 ヽ_つ    Gratulation, du hast gewonnen!");
+                System.out.println("　　/　/");
+                System.out.println("　 /　/|");
+                System.out.println("　(　(ヽ");
+                System.out.println("　|　|、＼");
+                System.out.println("　| 丿 ＼ ⌒)");
+                System.out.println("　| |　　) /");
+                System.out.println("ノ )　　Lﾉ");
+                System.out.println("(_／");
                 break;
             }
 
@@ -88,9 +102,18 @@ public class Main {
             if (counter == tries) {
                 getDisplay.youLostHangmanImage(counter);
                 System.out.println();
-                System.out.println("Du hast Verloren\n");
                 System.out.println("Das Lösungswort war: " + solution);
-                System.out.println("┻━━┻︵ヽ(`Д´)ﾉ︵ ┻━━┻");
+                System.out.println("⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿⣿⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿     Du hast Verloren");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿⣿⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿⣿⣿⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿");
+                System.out.println("⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿");
             }
         }
 

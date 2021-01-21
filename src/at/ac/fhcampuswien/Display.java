@@ -7,9 +7,9 @@ public class Display {
         System.out.println(guessingTemplate);
         System.out.println(wrongGuesses);
         hangmanImage(counter);
-        System.out.println("┍————-——-————-————-————-—————-┑");
-        System.out.println(" Gib einen Großbuchstaben ein!");
-        System.out.println("┕————————-—————-———————-————-—┙");
+        System.out.println("┍————-——-————-——ฅ^•ﻌ•^ฅ——-————-—————-┑");
+        System.out.println("     Gib einen Großbuchstaben ein!");
+        System.out.println("┕————————-—————-————-------———-————-—┙");
     }
 
     //ist die hangmanImage, die immer bei flaschen Eingaben schrittweise ausgeprinted wird
@@ -49,8 +49,8 @@ public class Display {
             System.out.println("   ____________");
             System.out.println("   |          _|_");
             System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
+            System.out.println("   |        | x x |");
+            System.out.println("   |         \\_⌒_/");
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("   |");
@@ -61,8 +61,8 @@ public class Display {
             System.out.println("   ____________");
             System.out.println("   |          _|_");
             System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
+            System.out.println("   |        | x x |");
+            System.out.println("   |         \\_⌒_/");
             System.out.println("   |           |");
             System.out.println("   |           |");
             System.out.println("   |");
@@ -73,8 +73,8 @@ public class Display {
             System.out.println("   ____________");
             System.out.println("   |          _|_");
             System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
+            System.out.println("   |        | x x |");
+            System.out.println("   |         \\_⌒_/");
             System.out.println("   |           |");
             System.out.println("   |           |");
             System.out.println("   |          / \\ ");
@@ -89,8 +89,8 @@ public class Display {
             System.out.println("   ____________");
             System.out.println("   |          _|_");
             System.out.println("   |         /   \\");
-            System.out.println("   |        |     |");
-            System.out.println("   |         \\_ _/");
+            System.out.println("   |        | x x |");
+            System.out.println("   |         \\_⌒_/");
             System.out.println("   |          _|_");
             System.out.println("   |         / | \\");
             System.out.println("   |          / \\ ");
