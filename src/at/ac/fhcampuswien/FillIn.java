@@ -1,6 +1,6 @@
 package at.ac.fhcampuswien;
 
-public class FillIn extends Display{
+public class FillIn {
 
 
     //befüllt den solutionWord char Array mit dem Lösungswort
